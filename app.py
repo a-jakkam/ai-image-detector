@@ -4,7 +4,8 @@ import os
 
 app = Flask(__name__)
 
-detector = pipeline("image-classification", model="umm-maybe/AI-image-detector")
+#detector = pipeline("image-classification", model="umm-maybe/AI-image-detector")
+detector = pipeline("image-classification", model="google/vit-base-patch16-224")
 
 @app.route("/", methods=["GET", "POST"])
 def home():
